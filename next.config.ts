@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
-  turbopack: {
-    root: __dirname,
+  eslint: {
+    ignoreDuringBuilds: false,
   },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  output: 'standalone',
 };
 
 export default nextConfig;
