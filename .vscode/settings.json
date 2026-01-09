@@ -1,0 +1,4 @@
+{
+    "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+    "python.REPL.sendToNativeREPL": true
+}
