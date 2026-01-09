@@ -1,103 +1,82 @@
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { landingCopy } from "@/lib/landingCopy";
 
 export function Evidence() {
+  const { authority, benefits, closing, cta } = landingCopy;
+  const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
+
   return (
     <section className="bg-gray-50 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        {/* Authority Section */}
+        <div className="mx-auto max-w-3xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Evidências: por que governança de CMV e operação protege margem e capacidade
+            {authority.title}
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            O impacto vem de reduzir variação de custo, desperdício operacional, no-show e decisões 
-            sem base em custo real. Não prometemos aumento de faturamento, mas controle objetivo de margem.
+          <div className="mt-8 space-y-4">
+            {authority.items.map((item, index) => (
+              <p key={index} className="text-lg text-gray-700">
+                {item}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mx-auto max-w-3xl mb-16">
+          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+            {benefits.title}
+          </h3>
+          <ul className="space-y-4">
+            {benefits.items.map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <svg className="h-6 w-6 flex-shrink-0 text-blue-600 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-sm text-gray-500 italic text-center">
+            {benefits.disclaimer}
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold text-gray-900">
-                Restaurantes e Bares
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">CMV e Prime Cost:</strong> controle de custo de matéria-prima 
-                    e mão de obra direta é o principal determinante de margem operacional sustentável
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Desperdício operacional:</strong> perdas de alimentos e insumos 
-                    representam impacto direto na margem, com evidências consolidadas sobre volume e custo evitável
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Precificação baseada em custo real:</strong> margem projetada 
-                    só se confirma quando há rastreabilidade de consumo efetivo e ajuste contínuo
-                  </span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+        {/* Closing Section */}
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xl font-semibold text-gray-900 mb-8">
+            {closing.anchor}
+          </p>
+          
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            {closing.finalTitle}
+          </h3>
+          
+          <p className="text-lg text-gray-600 mb-8">
+            {closing.finalText}
+          </p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold text-gray-900">
-                Clínicas e Consultórios
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Custo por procedimento:</strong> controle de materiais, 
-                    medicamentos e mão de obra define rentabilidade real de cada serviço e convênio
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">No-show e capacidade:</strong> revisões indicam que notificações 
-                    e gestão de agenda reduzem faltas, aumentando aproveitamento de capacidade instalada
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Produtividade operacional:</strong> ocupação de agenda e 
-                    conformidade de processos impactam receita efetiva e margem por hora trabalhada
-                  </span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold text-gray-900">
-                Serviços Recorrentes
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Margem por contrato:</strong> controle de custo recorrente 
-                    e rastreamento de consumo efetivo mantém margem dentro do projetado
-                  </span>
-                </li>
+          <div className="flex flex-col items-center justify-center gap-4">
+            <Button asChild size="lg">
+              <a 
+                href={whatsappUrl}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {cta.label}
+              </a>
+            </Button>
+            <p className="text-sm text-gray-500">
+              {cta.helper}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
                   <span>

@@ -3,9 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { landingCopy } from "@/lib/landingCopy";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { cta } = landingCopy;
+  const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,39 +31,39 @@ export function Header() {
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <span className="text-sm font-bold text-white">G</span>
+                <span className="text-sm font-bold text-white">JC</span>
               </div>
               <span className="text-lg font-semibold text-gray-900">
-                Governança CMV
+                Jadson Campos
               </span>
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
-              <Link
+              <a
                 href="#servicos"
                 className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
-                Serviços
-              </Link>
-              <Link
+                Soluções
+              </a>
+              <a
                 href="#segmentos"
                 className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Segmentos
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#como-funciona"
                 className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Como funciona
-              </Link>
+              </a>
             </nav>
           </div>
 
           <div className="flex items-center gap-3">
             <Button asChild variant="ghost" size="sm" className="hidden sm:flex">
               <a
-                href="https://wa.me/5521988551085"
+                href={`https://wa.me/${cta.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -68,7 +71,13 @@ export function Header() {
               </a>
             </Button>
             <Button asChild size="sm">
-              <Link href="#diagnostico">Agendar diagnóstico</Link>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Diagnóstico
+              </a>
             </Button>
           </div>
         </div>

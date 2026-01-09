@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { landingCopy } from "@/lib/landingCopy";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { cta, hero } = landingCopy;
 
   return (
     <footer className="border-t border-gray-200 bg-white">
@@ -10,43 +12,43 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <span className="text-sm font-bold text-white">G</span>
+                <span className="text-sm font-bold text-white">JC</span>
               </div>
               <span className="text-lg font-semibold text-gray-900">
-                Governança CMV
+                Jadson Campos
               </span>
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Governança mensal de CMV e operação para restaurantes, clínicas e serviços recorrentes.
+              Arquiteto de Soluções Operacionais. Eficiência operacional com automação inteligente e governança.
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Serviços</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">Soluções</h3>
             <ul className="space-y-3">
               <li>
-                <Link
+                <a
                   href="#servicos"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Governança de CMV
-                </Link>
+                  Diagnóstico orientado a dados
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#servicos"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Processos de Serviço
-                </Link>
+                  Automação inteligente
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#servicos"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Gestão de Perdas
-                </Link>
+                  Governança operacional
+                </a>
               </li>
             </ul>
           </div>
@@ -55,28 +57,16 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Segmentos</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/segmentos/restaurantes"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Restaurantes e Bares
-                </Link>
+                <span className="text-sm text-gray-600">Restaurantes</span>
               </li>
               <li>
-                <Link
-                  href="/segmentos/clinicas"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Clínicas e Consultórios
-                </Link>
+                <span className="text-sm text-gray-600">Clínicas</span>
               </li>
               <li>
-                <Link
-                  href="/segmentos/servicos-recorrentes"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Serviços Recorrentes
-                </Link>
+                <span className="text-sm text-gray-600">Hospitais</span>
+              </li>
+              <li>
+                <span className="text-sm text-gray-600">Serviços recorrentes</span>
               </li>
             </ul>
           </div>
@@ -86,21 +76,23 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://wa.me/5521988551085"
+                  href={`https://wa.me/${cta.whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  WhatsApp: (21) 98855-1085
+                  WhatsApp
                 </a>
               </li>
               <li>
-                <Link
-                  href="#diagnostico"
+                <a
+                  href={`https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Agendar diagnóstico
-                </Link>
+                  {cta.label}
+                </a>
               </li>
             </ul>
           </div>
@@ -108,7 +100,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500 text-center">
-            © {currentYear} Governança CMV. Todos os direitos reservados.
+            © {currentYear} Jadson Campos. Todos os direitos reservados.
           </p>
         </div>
       </div>

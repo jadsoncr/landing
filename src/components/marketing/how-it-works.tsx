@@ -1,102 +1,68 @@
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { landingCopy } from "@/lib/landingCopy";
 
 export function HowItWorks() {
+  const { howItWorks, cta } = landingCopy;
+  const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
+
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Como funciona a governança mensal de CMV e operação
+            {howItWorks.title}
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Ciclo contínuo de monitoramento, análise e decisão baseada em indicadores objetivos. 
-            O valor está na governança mensal, não apenas na implantação pontual.
+            {howItWorks.note}
           </p>
         </div>
 
         <div className="mx-auto mt-16 max-w-4xl">
           <ol className="space-y-8">
-            <li>
-              <Card className="relative border-l-4 border-l-blue-600">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
-                      1
+            {howItWorks.steps.map((step, index) => (
+              <li key={index}>
+                <Card className="relative border-l-4 border-l-blue-600">
+                  <CardHeader>
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
+                        {index + 1}
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-xl font-semibold text-gray-900">
+                          {step.title}
+                        </CardTitle>
+                        <p className="mt-2 text-gray-700">
+                          {step.desc}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl font-semibold text-gray-900">
-                        Diagnóstico integrado (pago)
-                      </CardTitle>
-                      <p className="mt-2 text-gray-700">
-                        Mapeamento de perdas operacionais e financeiras para priorizar o que corrige margem primeiro. 
-                        Base objetiva para decisão sobre onde atacar com governança contínua.
-                      </p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="ml-14">
-                    <p className="text-sm font-semibold text-gray-900">Entregáveis:</p>
-                    <ul className="mt-2 space-y-1">
-                      <li className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400" />
-                        <span>Mapa de perdas (CMV e operação com quantificação)</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400" />
-                        <span>Estimativa de impacto financeiro de cada perda identificada</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400" />
-                        <span>Prioridades do próximo ciclo (o que atacar primeiro)</span>
-                      </li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            </li>
+                  </CardHeader>
+                </Card>
+              </li>
+            ))}
+          </ol>
+        </div>
 
-            <li>
-              <Card className="relative border-l-4 border-l-blue-600">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
-                      2
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl font-semibold text-gray-900">
-                        Implantação mínima e controlada
-                      </CardTitle>
-                      <p className="mt-2 text-gray-700">
-                        Criação de visibilidade e rotina operacional sem complexidade desnecessária. 
-                        Foco em indicadores essenciais, regras e alertas para manter controle desde o início.
-                      </p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="ml-14">
-                    <p className="text-sm font-semibold text-gray-900">Entregáveis:</p>
-                    <ul className="mt-2 space-y-1">
-                      <li className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400" />
-                        <span>Indicadores essenciais configurados (painel executivo de CMV e operação)</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400" />
-                        <span>Regras e rotinas operacionais padronizadas</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400" />
-                        <span>Alertas de desvio de custo, margem e processos</span>
-                      </li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            </li>
+        <div className="mt-12 flex flex-col items-center justify-center gap-4">
+          <Button asChild size="lg">
+            <a 
+              href={whatsappUrl}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              {cta.label}
+            </a>
+          </Button>
+          <p className="text-sm text-gray-500 text-center max-w-md">
+            {cta.helper}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
             <li>
               <Card className="relative border-l-4 border-l-blue-600">

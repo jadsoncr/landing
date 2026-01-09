@@ -2,102 +2,54 @@ import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { landingCopy } from "@/lib/landingCopy";
 
 export function Segments() {
+  const { segments, cta } = landingCopy;
+  const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
+
   return (
     <section className="bg-gray-50 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Soluções por segmento: restaurantes, clínicas e serviços recorrentes
+            {segments.title}
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Governança de CMV, margem, desperdício, estoque, custos por procedimento, agenda, 
-            eficiência operacional e indicadores de decisão para cada segmento.
+            Soluções adaptadas para cada contexto operacional: volume, margens, processos e controles específicos.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-5xl">
-          <Tabs defaultValue="restaurantes" className="w-full">
-            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3">
-              <TabsTrigger value="restaurantes">Restaurantes e Bares</TabsTrigger>
-              <TabsTrigger value="clinicas">Clínicas e Consultórios</TabsTrigger>
-              <TabsTrigger value="servicos">Serviços Recorrentes</TabsTrigger>
-            </TabsList>
+        <div className="mx-auto mt-16 max-w-4xl grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {segments.items.map((segment, index) => (
+            <Card key={index} className="card-premium">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-gray-900">
+                  {segment.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">{segment.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-            <TabsContent value="restaurantes" className="mt-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-gray-900">
-                    Restaurantes e Bares
-                  </CardTitle>
-                  <p className="mt-2 text-gray-700">
-                    CMV real, desperdício, estoque e margem por item e linha de produto. 
-                    Controle mensal para decisão sobre compras, precificação e cardápio.
-                  </p>
-                </CardHeader>
-                <CardContent className="space-y-8">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">O que governamos</h3>
-                    <ul className="mt-4 space-y-2">
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>CMV real (compras vs consumo efetivo por item e linha)</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Ficha técnica padronizada e variações de custo de insumo</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Estoque (ruptura e excesso, giro e reposição)</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Desperdício e perdas operacionais por categoria</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Precificação baseada em custo real e margem esperada</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Rotina de decisão mensal (compras, preço e cardápio)</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">KPIs acompanhados</h3>
-                    <ul className="mt-4 space-y-2">
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>CMV real e variação mês a mês</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Margem operacional por item e linha</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Desperdício (% e R$) por categoria</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Ruptura e excesso de estoque</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Custo por item e linha de produto</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-gray-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                        <span>Perdas por processo operacional</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+        <div className="mt-12 flex flex-col items-center justify-center gap-4">
+          <Button asChild size="lg">
+            <a 
+              href={whatsappUrl}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              {cta.label}
+            </a>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
                     <Button asChild size="lg" className="w-full sm:w-auto">
                       <Link href="#diagnostico">
                         Agendar diagnóstico
