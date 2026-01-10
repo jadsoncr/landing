@@ -17,7 +17,7 @@ export function Services() {
 
         <div className="mx-auto max-w-3xl space-y-1">
           {services.items.map((service: { title: string; desc: string; highlighted?: boolean }, index: number) => {
-            const isCore = index === 0 || index === 4; // Arquitetura CS/CX e Governança
+            const isCore = service.highlighted; // CS/CX e Governança
             return (
               <div
                 key={index}

@@ -61,16 +61,24 @@ export const landingCopy = {
     guide: "Essas restrições aparecem em setores diferentes, mas produzem sempre os mesmos efeitos.",
     items: [
       {
-        category: "Restrição de decisão",
-        text: "Indicadores que medem atividade, mas não orientam decisão executiva",
+        category: "Restrição âncora",
+        text: "Sem governança, custo e experiência viram ruído — e decisão vira opinião.",
       },
       {
-        category: "Restrição de custo",
-        text: "Custo e desperdício invisíveis — fricções estruturais que ninguém consegue localizar",
+        category: "Custo",
+        text: "Custo e desperdício invisíveis (ninguém enxerga causa)",
       },
       {
-        category: "Restrição de conhecimento",
-        text: "Dependência de pessoas-chave — operação travada em conhecimento tácito",
+        category: "Dependência",
+        text: "Dependência de pessoas-chave e exceções",
+      },
+      {
+        category: "Rastreabilidade",
+        text: "Baixa rastreabilidade entre áreas/canais (retrabalho)",
+      },
+      {
+        category: "Indicadores",
+        text: "Indicadores que medem atividade, não decisão",
       },
     ],
   },
@@ -81,25 +89,30 @@ export const landingCopy = {
       "Não é consultoria genérica. É desenho e implantação de soluções operacionais com governança contínua.",
     items: [
       {
-        title: "Arquitetura de experiência e sucesso do cliente",
-        desc: "Desenho de jornadas ponta a ponta (CX) e estruturação de governança de sucesso do cliente (CS) com indicadores acionáveis.",
+        title: "Arquitetura operacional orientada a dados",
+        desc: "Diagnóstico estrutural, desenho de fluxos e processos ponta a ponta, definição de métricas acionáveis.",
       },
       {
         title: "Implantação de centrais e canais (digital e presencial)",
         desc: "Estruturação completa de operações de atendimento, SAC, suporte e backoffice com processos, equipes e SLAs.",
       },
       {
-        title: "Implantação e customização de CRMs e sistemas",
+        title: "Implantação e customização de sistemas e CRMs",
         desc: "Salesforce, Zendesk, NICE e outras plataformas adaptadas ao contexto operacional real, não configuração genérica.",
       },
       {
         title: "Agentes, automações e fluxos inteligentes",
-        desc: "Agentes humanizados (digitais/híbridos), automações que leem dados e métricas, sugestões acionáveis baseadas em sinais operacionais e de mercado.",
+        desc: "Automações que leem métricas, sugestões acionáveis (sinais operacionais/mercado).",
+      },
+      {
+        title: "Estruturação e reestruturação de CS & CX",
+        desc: "Processos, automação de onboarding/relacionamento/suporte, redução estrutural de churn via governança.",
         highlighted: true,
       },
       {
-        title: "Governança contínua (CX, CS, custo, churn, escala)",
+        title: "Governança contínua: custo, SLA, churn, reclamações, escala",
         desc: "Ciclo mensal de monitoramento, alerta, ajuste e decisão para manter previsibilidade operacional e financeira.",
+        highlighted: true,
       },
     ],
   },
@@ -156,20 +169,20 @@ export const landingCopy = {
     title: "Onde aplico com mais impacto",
     items: [
       {
-        title: "Operações com CMV e margem sensíveis",
-        desc: "Identificação de perdas estruturais, redução de desperdício, padrão operacional e controle de custo.",
+        title: "Operações com CMV e margem sensível",
+        desc: "Indústria, food, redes, operações metrificadas — identificação de perdas estruturais e controle de custo.",
       },
       {
-        title: "Clínicas e hospitais",
-        desc: "Fluxo de atendimento, produtividade de agenda, redução de no-show, governança entre áreas.",
+        title: "Clínicas e hospitais (fluxo, agenda, redução de no-show)",
+        desc: "Produtividade de agenda, redução de no-show, governança entre áreas, custo por procedimento.",
       },
       {
         title: "Serviços recorrentes e operações escaláveis",
-        desc: "Processos replicáveis, automação pragmática, previsibilidade de crescimento.",
+        desc: "Processos replicáveis, automação pragmática, margens previsíveis, governança contínua.",
       },
       {
-        title: "Operações intensivas em atendimento e experiência",
-        desc: "Padronização de jornadas, redução de fricções, melhoria perceptual controlada.",
+        title: "Operações intensivas em atendimento e reputação",
+        desc: "Padronização de jornadas, redução de fricções, indicadores acionáveis, controle de SLAs.",
       },
     ],
   },

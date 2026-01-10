@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: landingCopy.seo.title,
   description: landingCopy.seo.description,
   keywords: landingCopy.seo.keywords,
+  verification: {
+    google: "google2473cac25dbe387e",
+  },
 };
 
 export default function RootLayout({

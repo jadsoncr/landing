@@ -5,7 +5,7 @@ export function Hero() {
   const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
 
   return (
-    <section className="relative bg-white py-24 sm:py-32 lg:py-40 pb-32 sm:pb-40 lg:pb-48">
+    <section className="relative bg-white py-24 sm:py-32 lg:py-40 pb-40 sm:pb-52 lg:pb-64">
       <div className="container-premium relative">
         <div className="mx-auto max-w-3xl text-center">
           {/* Layer 1: CONTEXT */}
@@ -53,10 +53,10 @@ export function Hero() {
             </p>
           </div>
 
-          {/* FRASE-MURO: desacelera leitura e ancora autoridade */}
+          {/* FRASE-MURO 1: desacelera leitura e ancora autoridade */}
           <div className="mt-16 pt-12 border-t border-gray-200">
             <p className="text-base font-medium text-gray-900 leading-relaxed">
-              Operações complexas exigem arquitetura, não improvisação.
+              Operações não falham por falta de esforço. Falham por falta de estrutura.
             </p>
           </div>
         </div>
