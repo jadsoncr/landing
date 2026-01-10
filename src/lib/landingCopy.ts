@@ -4,13 +4,14 @@ export const landingCopy = {
     title:
       "Eficiência Operacional, Automação Inteligente e Governança | Jadson Campos",
     description:
-      "Arquiteto de Soluções Operacionais. Diagnóstico orientado a dados para identificar gargalos, reduzir custos e escalar operações com governança. Restaurantes, clínicas, hospitais e serviços recorrentes.",
+      "Arquiteto de Soluções Operacionais. Diagnóstico orientado a dados para identificar restrições estruturais, eliminar fricções operacionais e escalar com governança. Restaurantes, clínicas, hospitais e serviços recorrentes.",
     keywords: [
       "eficiência operacional",
       "automação inteligente",
       "automação de processos",
       "melhoria de processos",
-      "gargalos operacionais",
+      "restrições estruturais",
+      "fricções operacionais",
       "governança operacional",
       "process mining",
       "mineração de processos",
@@ -32,7 +33,7 @@ export const landingCopy = {
     badge: "Arquitetura Operacional • Automação • Dados",
     h1: "Eficiência Operacional para escalar com controle e previsibilidade",
     subheadline:
-      "Identifico gargalos com base em dados e desenho soluções — processos, automação inteligente e arquitetura de serviços — para reduzir custo, aumentar previsibilidade e elevar a experiência do cliente.",
+      "Identifico restrições estruturais com base em dados e desenho soluções — processos, automação inteligente e arquitetura de serviços — para eliminar fricções, reduzir custo e aumentar previsibilidade.",
     forWho: "Para restaurantes, clínicas, hospitais e operações recorrentes.",
     signature:
       "Jadson Campos • Arquiteto de Soluções Operacionais • +20 anos em operações complexas e reguladas",
@@ -40,7 +41,7 @@ export const landingCopy = {
       {
         icon: "chart",
         title: "Diagnóstico orientado a dados",
-        description: "Identificação de gargalos e perdas com análise objetiva",
+        description: "Identificação de restrições estruturais e perdas com análise objetiva",
       },
       {
         icon: "cog",
@@ -56,14 +57,25 @@ export const landingCopy = {
   },
 
   problems: {
-    title: "O que normalmente trava uma operação",
+    title: "Restrições estruturais recorrentes",
+    guide: "Essas restrições aparecem em setores diferentes, mas produzem sempre os mesmos efeitos.",
     items: [
-      "Custo e desperdício invisíveis (o dinheiro some, mas ninguém consegue apontar onde)",
-      "Processos dependentes de pessoas-chave para manter a operação funcionando",
-      "Retrabalho, exceções e ruído entre áreas e sistemas",
-      "Indicadores que medem atividade, não orientam decisão",
-      "Crescimento que aumenta risco em vez de previsibilidade",
-      "Autoatendimento que transfere o problema para o cliente",
+      {
+        category: "Restrições de decisão",
+        text: "Indicadores que medem atividade, mas não orientam decisão executiva",
+      },
+      {
+        category: "Restrições de decisão",
+        text: "Custo e desperdício invisíveis — fricções estruturais que ninguém consegue localizar",
+      },
+      {
+        category: "Restrições de execução",
+        text: "Dependência de pessoas-chave — operação travada em conhecimento tácito",
+      },
+      {
+        category: "Restrições de execução",
+        text: "Fricções entre áreas e sistemas — retrabalho, exceções e ruído constante",
+      },
     ],
   },
 
@@ -73,24 +85,25 @@ export const landingCopy = {
       "Não é consultoria genérica. É desenho e implantação de soluções operacionais com governança contínua.",
     items: [
       {
-        title: "Diagnóstico orientado a dados",
-        desc: "Leitura de dados e sinais operacionais para localizar gargalos e perdas com rapidez.",
+        title: "Arquitetura de experiência e sucesso do cliente",
+        desc: "Desenho de jornadas ponta a ponta (CX) e estruturação de governança de sucesso do cliente (CS) com indicadores acionáveis.",
       },
       {
-        title: "Arquitetura de processos e serviços",
-        desc: "Fluxos ponta a ponta, papéis claros, regras e pontos de controle para escala.",
+        title: "Implantação de centrais e canais (digital e presencial)",
+        desc: "Estruturação completa de operações de atendimento, SAC, suporte e backoffice com processos, equipes e SLAs.",
       },
       {
-        title: "Automação inteligente (BPM/RPA + regras)",
-        desc: "Automação pragmática: reduz fricção e exceções, com trilha e governança.",
+        title: "Implantação e customização de CRMs e sistemas",
+        desc: "Salesforce, Zendesk, NICE e outras plataformas adaptadas ao contexto operacional real, não configuração genérica.",
       },
       {
-        title: "Autoatendimento e autosserviço",
-        desc: "Modelos de atendimento que realmente resolvem — para cliente e para operação.",
+        title: "Agentes, automações e fluxos inteligentes",
+        desc: "Agentes humanizados (digitais/híbridos), automações que leem dados e métricas, sugestões acionáveis baseadas em sinais operacionais e de mercado.",
+        highlighted: true,
       },
       {
-        title: "KPIs, SLAs e governança operacional",
-        desc: "Indicadores acionáveis e rotina de decisão: previsibilidade, padrão e melhoria contínua.",
+        title: "Governança contínua (CX, CS, custo, churn, escala)",
+        desc: "Ciclo mensal de monitoramento, alerta, ajuste e decisão para manter previsibilidade operacional e financeira.",
       },
     ],
   },
@@ -100,7 +113,7 @@ export const landingCopy = {
     steps: [
       {
         title: "1) Diagnóstico",
-        desc: "Entendo o contexto, leio dados disponíveis e mapeio gargalos, riscos e oportunidades.",
+        desc: "Entendo o contexto, leio dados disponíveis e mapeio restrições estruturais, riscos e oportunidades.",
       },
       {
         title: "2) Desenho da solução",
@@ -118,7 +131,7 @@ export const landingCopy = {
   demo: {
     title: "Exemplo de leitura operacional orientada a dados",
     text:
-      "Um recorte simplificado de como uso dados para identificar gargalos e orientar decisões. A ferramenta não é o produto — é parte do método.",
+      "Um recorte simplificado de como uso dados para identificar restrições estruturais e orientar decisões. A ferramenta não é o produto — é parte do método.",
     hint: "Inserção de dados → leitura → orientação de decisão",
     fieldsSuggestionTitle: "O que a demo pode pedir (exemplo)",
     fieldsSuggestion: [
@@ -133,7 +146,7 @@ export const landingCopy = {
   benefits: {
     title: "Resultados esperados (sem promessas irreais)",
     items: [
-      "Redução de desperdício e custo operacional por eliminação de fricções e retrabalho",
+      "Redução de desperdício e custo operacional por eliminação de fricções estruturais e retrabalho",
       "Mais previsibilidade financeira e operacional (menos variação, mais controle)",
       "Decisão mais rápida com indicadores acionáveis",
       "Padronização para escalar com consistência",
@@ -147,20 +160,20 @@ export const landingCopy = {
     title: "Onde aplico com mais impacto",
     items: [
       {
-        title: "Restaurantes",
-        desc: "Custo, desperdício, padrão de operação, previsibilidade e rotinas de controle.",
+        title: "Operações com CMV e margem sensíveis",
+        desc: "Identificação de perdas estruturais, redução de desperdício, padrão operacional e controle de custo.",
       },
       {
-        title: "Clínicas",
-        desc: "Agenda, fluxo de atendimento, produtividade de equipe, redução de retrabalho e filas.",
+        title: "Clínicas e hospitais",
+        desc: "Fluxo de atendimento, produtividade de agenda, redução de no-show, governança entre áreas.",
       },
       {
-        title: "Hospitais (por jornada/área)",
-        desc: "Governança, padronização, indicadores acionáveis e redução de ruído entre áreas.",
+        title: "Serviços recorrentes e operações escaláveis",
+        desc: "Processos replicáveis, automação pragmática, previsibilidade de crescimento.",
       },
       {
-        title: "Serviços recorrentes",
-        desc: "Processos replicáveis, automação pragmática e operação preparada para escalar.",
+        title: "Operações intensivas em atendimento e experiência",
+        desc: "Padronização de jornadas, redução de fricções, melhoria perceptual controlada.",
       },
     ],
   },
@@ -187,9 +200,9 @@ export const landingCopy = {
 
   closing: {
     anchor:
-      "Não digitalizo burocracia. Projeto sistemas de serviço que funcionam, escalam e geram retorno mensurável.",
+      "Não digitalizo burocracia. Projeto sistemas de serviço que eliminam restrições estruturais, funcionam, escalam e geram retorno mensurável.",
     finalTitle: "Agende um diagnóstico operacional",
     finalText:
-      "Conversa inicial orientada a dados para mapear gargalos e definir um plano pragmático de solução. Sem compromisso. Sem proposta automática.",
+      "Conversa inicial orientada a dados para mapear restrições estruturais e definir um plano pragmático de solução. Sem compromisso. Sem proposta automática.",
   },
 };

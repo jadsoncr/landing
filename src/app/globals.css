@@ -51,6 +51,45 @@
     color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: rgb(17 24 39);
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(17 24 39);
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: rgb(17 24 39);
+  }
+
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.75rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .container-premium {
@@ -89,5 +128,17 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.section-spacing {
+  padding-top: 4rem;    /* 64px */
+  padding-bottom: 4rem; /* 64px */
+}
+
+@media (min-width: 640px) {
+  .section-spacing {
+    padding-top: 6rem;    /* 96px */
+    padding-bottom: 6rem; /* 96px */
+  }
 }
 

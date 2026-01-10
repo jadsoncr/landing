@@ -1,47 +1,49 @@
-import Link from "next/link";
-import { Section } from "@/components/marketing/section";
-import { Button } from "@/components/ui/button";
 import { landingCopy } from "@/lib/landingCopy";
 
 export function Services() {
-  const { services, cta } = landingCopy;
-  const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
+  const { services } = landingCopy;
 
   return (
-    <Section
-      id="servicos"
-      title={services.title}
-      subtitle={services.intro}
-      background="white"
-    >
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-16">
-        {services.items.map((service, index) => (
-          <div key={index} className="card-premium p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-              {service.title}
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {service.desc}
-            </p>
-          </div>
-        ))}
-      </div>
+    <section id="servicos" className="bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-12">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            {services.title}
+          </h2>
+          <p className="mt-4 text-base text-gray-600 leading-relaxed">
+            {services.intro}
+          </p>
+        </div>
 
-      <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Button asChild size="lg" className="w-full sm:w-auto">
-          <a 
-            href={whatsappUrl}
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            {cta.label}
-          </a>
-        </Button>
-        
-        <p className="text-sm text-gray-500 text-center sm:text-left max-w-md">
-          {cta.helper}
-        </p>
+        <div className="mx-auto max-w-3xl space-y-1">
+          {services.items.map((service: { title: string; desc: string; highlighted?: boolean }, index: number) => {
+            const isCore = index === 0 || index === 4; // Arquitetura CS/CX e Governança
+            return (
+              <div
+                key={index}
+                className={`py-6 ${
+                  isCore
+                    ? 'border-l-4 border-blue-600 pl-8 bg-blue-50/50'
+                    : 'border-l-2 border-gray-200 pl-8'
+                }`}
+              >
+                <h3 className={`mb-2 ${
+                  isCore 
+                    ? 'text-lg font-bold text-blue-900' 
+                    : 'text-sm font-medium text-gray-700'
+                }`}>
+                  {isCore ? service.title : `${index + 1}. ${service.title}`}
+                </h3>
+                <p className={`leading-relaxed ${
+                  isCore ? 'text-base text-gray-900' : 'text-sm text-gray-600'
+                }`}>
+                  {service.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }

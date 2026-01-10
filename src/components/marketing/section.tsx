@@ -30,14 +30,14 @@ export function Section({
     >
       <div className="container-premium">
         {(title || subtitle) && (
-          <div className="mx-auto max-w-3xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16">
             {title && (
-              <h2 className="text-balance">
+              <h2 className="mb-4">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="mt-4 text-lg sm:text-xl text-gray-600 text-balance">
+              <p className="text-lg text-gray-600">
                 {subtitle}
               </p>
             )}
