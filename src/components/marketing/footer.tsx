@@ -68,6 +68,9 @@ export function Footer() {
                 <span className="text-sm text-gray-600">Serviços recorrentes</span>
               </li>
             </ul>
+            <p className="mt-4 text-sm text-gray-500">
+              Operações intensivas em atendimento, recorrência, custo e regulação.
+            </p>
           </div>
 
           <div>

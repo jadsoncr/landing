@@ -65,7 +65,7 @@ export function CsCx() {
 
           <div className="mt-8 pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-600 italic">
-              Em startups e produtos digitais em crescimento, onde CS e CX precisam sustentar escala, retenção e expansão.
+              Aplicado a operações recorrentes, serviços escaláveis e produtos digitais onde CS e CX precisam sustentar retenção e crescimento com governança.
             </p>
           </div>
         </div>

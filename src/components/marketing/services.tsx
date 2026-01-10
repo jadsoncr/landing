@@ -32,7 +32,7 @@ export function Services() {
                     ? 'text-lg font-bold text-blue-900' 
                     : 'text-sm font-medium text-gray-700'
                 }`}>
-                  {isCore ? service.title : `${index + 1}. ${service.title}`}
+                  {service.title}
                 </h3>
                 <p className={`leading-relaxed ${
                   isCore ? 'text-base text-gray-900' : 'text-sm text-gray-600'

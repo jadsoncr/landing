@@ -5,21 +5,21 @@ export function Hero() {
   const whatsappUrl = `https://wa.me/${cta.whatsappNumber}?text=${encodeURIComponent(cta.whatsappMessage)}`;
 
   return (
-    <section className="relative bg-white py-20 sm:py-28 lg:py-36 pb-28 sm:pb-36 lg:pb-44">
+    <section className="relative bg-white py-24 sm:py-32 lg:py-40 pb-32 sm:pb-40 lg:pb-48">
       <div className="container-premium relative">
         <div className="mx-auto max-w-3xl text-center">
           {/* Layer 1: CONTEXT */}
-          <p className="text-sm font-medium text-gray-600 tracking-wide mb-6">
+          <p className="text-sm font-medium text-gray-600 tracking-wide mb-8">
             Arquitetura Operacional · Automação Inteligente · Ciência de Dados
           </p>
 
           {/* Layer 2: DECISION */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-8">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-10">
             Eficiência operacional para escalar com controle e previsibilidade
           </h1>
           
           {/* Layer 3: METHOD */}
-          <p className="text-lg text-gray-700 leading-relaxed mb-10">
+          <p className="text-lg text-gray-700 leading-relaxed mb-12">
             Com base em dados e nas necessidades do negócio, identifico restrições estruturais e lacunas operacionais e desenho soluções com automação e arquitetura operacional para reduzir custos, aumentar previsibilidade e sustentar a experiência.
           </p>
 

@@ -61,20 +61,16 @@ export const landingCopy = {
     guide: "Essas restrições aparecem em setores diferentes, mas produzem sempre os mesmos efeitos.",
     items: [
       {
-        category: "Restrições de decisão",
+        category: "Restrição de decisão",
         text: "Indicadores que medem atividade, mas não orientam decisão executiva",
       },
       {
-        category: "Restrições de decisão",
+        category: "Restrição de custo",
         text: "Custo e desperdício invisíveis — fricções estruturais que ninguém consegue localizar",
       },
       {
-        category: "Restrições de execução",
+        category: "Restrição de conhecimento",
         text: "Dependência de pessoas-chave — operação travada em conhecimento tácito",
-      },
-      {
-        category: "Restrições de execução",
-        text: "Fricções entre áreas e sistemas — retrabalho, exceções e ruído constante",
       },
     ],
   },
