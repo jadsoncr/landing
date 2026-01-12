@@ -106,7 +106,7 @@ export const landingCopy = {
       },
       {
         title: "Estruturação e reestruturação de CS & CX",
-        desc: "Processos, automação de onboarding/relacionamento/suporte, redução estrutural de churn via governança.",
+        desc: "Desenho e implanto sistemas de CX e CS escaláveis para reduzir churn, proteger receita e qualificar a experiência do cliente.",
         highlighted: true,
       },
       {
