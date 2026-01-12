@@ -36,7 +36,7 @@ export function Cases() {
                 {item.title}
               </h3>
               
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-base">
                 <div>
                   <span className="font-semibold text-gray-900">Contexto:</span>{" "}
                   <span className="text-gray-700">{item.context}</span>

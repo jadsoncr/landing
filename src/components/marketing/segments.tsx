@@ -23,9 +23,9 @@ export function Segments() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {segment.title}
               </h3>
-              <p className="text-sm text-gray-600 mb-4">{segment.desc}</p>
+              <p className="text-base text-gray-600 mb-4">{segment.desc}</p>
               <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2 text-sm text-gray-700 leading-relaxed">
                   <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-blue-600" />
                   <span>
                     {index === 0 && "Fichas técnicas confiáveis e controle de perdas"}
@@ -34,7 +34,7 @@ export function Segments() {
                     {index === 3 && "Processos replicáveis e controle de SLAs"}
                   </span>
                 </li>
-                <li className="flex items-start gap-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2 text-sm text-gray-700 leading-relaxed">
                   <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-blue-600" />
                   <span>
                     {index === 0 && "Indicadores mensais para decisão sobre cardápio e preço"}

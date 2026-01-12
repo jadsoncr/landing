@@ -9,12 +9,12 @@ export function Hero() {
       <div className="container-premium relative">
         <div className="mx-auto max-w-3xl text-center">
           {/* Layer 1: CONTEXT */}
-          <p className="text-sm font-medium text-gray-600 tracking-wide mb-8">
+          <p className="text-base font-medium text-gray-600 tracking-wide mb-8">
             Arquitetura Operacional · Automação Inteligente · Ciência de Dados
           </p>
 
           {/* Layer 2: DECISION */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-10">
             Eficiência operacional para escalar com controle e previsibilidade
           </h1>
           
@@ -28,13 +28,13 @@ export function Hero() {
             <p className="text-base font-semibold text-gray-900 mb-1">
               Jadson Campos · Arquiteto de Soluções Operacionais
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-base text-gray-600">
               +20 anos em operações complexas · Saúde · Transporte · Serviços recorrentes · Tecnologia
             </p>
           </div>
 
           {/* ASSINATURA (única vez na página) */}
-          <p className="text-sm text-gray-600 italic mb-10 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 italic mb-10 max-w-2xl mx-auto">
             "Não digitalizo burocracia. Projeto sistemas de serviço que funcionam, escalam e geram retorno mensurável para o negócio."
           </p>
 

@@ -30,12 +30,12 @@ export function Services() {
                 <h3 className={`mb-2 ${
                   isCore 
                     ? 'text-lg font-bold text-blue-900' 
-                    : 'text-sm font-medium text-gray-700'
+                    : 'text-base font-medium text-gray-700'
                 }`}>
                   {service.title}
                 </h3>
                 <p className={`leading-relaxed ${
-                  isCore ? 'text-base text-gray-900' : 'text-sm text-gray-600'
+                  isCore ? 'text-base text-gray-900' : 'text-base text-gray-600'
                 }`}>
                   {service.desc}
                 </p>

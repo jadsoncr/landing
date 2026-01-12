@@ -28,7 +28,7 @@ export function Results() {
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {results.map((result, index) => (
             <div key={index} className="text-center">
-              <p className="text-2xl font-bold text-white sm:text-3xl">
+              <p className="text-3xl font-bold text-white sm:text-4xl">
                 {result.metric}
               </p>
               <p className="mt-2 text-xs text-gray-400 leading-relaxed">

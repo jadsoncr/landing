@@ -31,7 +31,7 @@ export function Problems() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {problems.items.slice(1).map((item: { category: string; text: string }, index: number) => (
               <div key={index} className="border-l-4 border-gray-300 bg-white pl-6 pr-6 py-5">
-                <p className="text-sm text-gray-900 leading-relaxed font-medium mb-2">{item.text}</p>
+                <p className="text-base text-gray-900 leading-relaxed font-medium mb-2">{item.text}</p>
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   {item.category}
                 </p>

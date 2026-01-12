@@ -10,8 +10,8 @@ export function CsCx() {
             </p>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 sm:text-4xl lg:text-5xl">
-            Estruturo e reestruturo CS & CX como sistemas escaláveis de proteção de receita
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 sm:text-4xl lg:text-5xl leading-snug text-center">
+            Desenho e implanto sistemas de CX e CS escaláveis para reduzir churn, proteger receita e qualificar a experiência do cliente.
           </h2>
 
           <div className="space-y-6">

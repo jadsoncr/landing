@@ -33,14 +33,14 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="pl-8 py-8 border-b border-gray-200 last:border-b-0">
               <div className="flex items-baseline gap-3 mb-3">
-                <span className="text-sm font-bold text-gray-400">
+                <span className="text-sm font-bold text-gray-600">
                   {step.number}
                 </span>
                 <h3 className="text-lg font-bold text-gray-900">
                   {step.title}
                 </h3>
               </div>
-              <p className="text-sm text-gray-700 leading-relaxed pl-8">{step.desc}</p>
+              <p className="text-base text-gray-700 leading-relaxed pl-8">{step.desc}</p>
             </div>
           ))}
         </div>
