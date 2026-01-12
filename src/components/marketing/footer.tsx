@@ -20,36 +20,74 @@ export function Footer() {
             <p className="text-sm text-gray-600 leading-relaxed">
               Arquiteto de Soluções Operacionais. Eficiência operacional com automação inteligente e governança.
             </p>
+            
+            <div className="pt-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-4">Soluções</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#servicos"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                  >
+                    Diagnóstico orientado a dados
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#servicos"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                  >
+                    Automação inteligente
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#servicos"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                  >
+                    Governança operacional
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Soluções</h3>
-            <ul className="space-y-3">
-              <li>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">Portfólio</h3>
+            <div className="space-y-6">
+              <div className="space-y-2">
                 <a
-                  href="#servicos"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                  href="https://broai-omega.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded inline-block"
                 >
-                  Diagnóstico orientado a dados
+                  BRO.AI
                 </a>
-              </li>
-              <li>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Controle de gastos, CMV real e automação inteligente.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Interpreta dados do negócio e sugere ações práticas para melhorar margem e previsibilidade.
+                </p>
+              </div>
+              <div className="space-y-2">
                 <a
-                  href="#servicos"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                  href="https://duus.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded inline-block"
                 >
-                  Automação inteligente
+                  DUUS
                 </a>
-              </li>
-              <li>
-                <a
-                  href="#servicos"
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
-                >
-                  Governança operacional
-                </a>
-              </li>
-            </ul>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Clareza emocional aplicada à tomada de decisão.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Ajuda a transformar percepções difusas em decisões mais conscientes e eficazes.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -104,41 +142,6 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Projetos no ar - discreet section above copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-sm font-semibold text-gray-900 mb-4 text-center">
-            Projetos no ar
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="space-y-1">
-              <a
-                href="https://broai-omega.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded inline-block"
-              >
-                BRO.AI
-              </a>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Gestão e automação inteligente para bares e restaurantes.
-              </p>
-            </div>
-            <div className="space-y-1">
-              <a
-                href="https://duus.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded inline-block"
-              >
-                DUUS
-              </a>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Guia do momento presente, ajudando a nomear emoções por meio de automação inteligente.
-              </p>
-            </div>
           </div>
         </div>
 
