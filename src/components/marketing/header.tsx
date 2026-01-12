@@ -36,12 +36,11 @@ export function Header() {
               className="flex items-center gap-2 min-w-0 shrink-0"
               aria-label="Jadson Campos - Página inicial"
             >
-              {/* Logo - escondida em telas < 360px, visível a partir de xs */}
+              {/* Logo - sempre visível em desktop, escondida apenas em mobile muito pequeno */}
               <img 
                 src="/logo.svg" 
-                alt="" 
-                className="hidden xs:block h-10 sm:h-12 w-auto flex-shrink-0"
-                aria-hidden="true"
+                alt="Logo Jadson Campos" 
+                className="h-10 sm:h-12 w-auto flex-shrink-0"
               />
               {/* Nome completo sempre visível */}
               <span className="text-base sm:text-lg font-semibold text-gray-900 whitespace-nowrap">
