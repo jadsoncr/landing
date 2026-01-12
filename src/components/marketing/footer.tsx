@@ -107,6 +107,41 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Projetos no ar - discreet section above copyright */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <h3 className="text-sm font-semibold text-gray-900 mb-4 text-center">
+            Projetos no ar
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="space-y-1">
+              <a
+                href="https://broai-omega.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded inline-block"
+              >
+                BRO.AI
+              </a>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Gestão e automação inteligente para bares e restaurantes.
+              </p>
+            </div>
+            <div className="space-y-1">
+              <a
+                href="https://duus.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded inline-block"
+              >
+                DUUS
+              </a>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Guia do momento presente, ajudando a nomear emoções por meio de automação inteligente.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500 text-center">
             © {currentYear} Jadson Campos. Todos os direitos reservados.
